@@ -1,43 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rinterio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rinterio</title>
 
-    <!-- google font link  -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+  <!-- google font link  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 
-    <style>
-        .font-manrope{
-          font-family: "Manrope";
-        }
-    </style>
+  <style>
+    .font-manrope {
+      font-family: "Manrope";
+    }
+  </style>
 
-    <!-- Tailwind cdn -->
-    <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Tailwind cdn -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- costomize design with tailwind  -->
-    <script>
-        tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                clifford: '#da373d',
-              }
-            }
+
+  <!-- Daisy ui cdn  -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- font awesome cdn  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- costomize design with tailwind  -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+            'primary-clr': '#abef5f',
+            'yash-clr': '#737373',
           }
         }
-      </script>
-
-      <!-- Daisy ui cdn  -->
-      <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
-      <script src="https://cdn.tailwindcss.com"></script>
+      }
+    }
+  </script>
 
 </head>
+
 <body class="font-manrope">
-    <h1 class="font-bold text-3xl">Hlw world </h1>
+  <header class="bg-gradient-to-b from-gray-200 to-white">
+    <!-- nav started here  -->
+    <nav>
+      <div class="navbar w-4/5 mx-auto pt-10">
+        <div class="navbar-start flex-row-reverse lg:flex-row ml-9 lg:ml-0">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+              </svg>
+            </div>
+            <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow text-yash-clr">
+              <li><a>Home</a></li>
+              <li><a>Services</a></li>
+              <li><a>portfolio</a></li>
+              <li><a>Blog</a></li>
+              <li><a>Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="flex">
+            <i class="fa-solid fa-arrow-right bg-primary-clr p-3 rounded-full -rotate-45 mr-2"></i>
+            <a class="text-3xl font-extrabold">Rinterio</a>
+          </div>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1 text-yash-clr">
+            <li><a>Home</a></li>
+            <li><a>Services</a></li>
+            <li><a>portfolio</a></li>
+            <li><a>Blog</a></li>
+            <li><a>Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="navbar-end space-x-2 invisible lg:visible">
+          <!-- search icon  -->
+          <i class="fa-solid fa-magnifying-glass text-xl text-yash-clr border px-2 py-1 rounded-full bg-white"></i>
+          
+          <!-- shopping card icon  -->
+          <i class="fa-solid fa-cart-shopping text-xl text-yash-clr border px-2 py-1 rounded-full bg-white"></i>
+
+          <!-- nav button  -->
+          <a class="btn rounded-full bg-primary-clr text-xl font-bold">Book Consult <i class="fa-solid fa-arrow-right bg-black text-white p-1 rounded-full -rotate-45 ml-2"></i> </a>
+        </div>
+      </div>
+    </nav>
+    
+    <!-- banner section  -->
+     <div>
+      <div class="hero min-h-screen">
+        <div class="hero-content text-center">
+          <div >
+            <!-- banner image  -->
+            <div class="max-w-md mx-auto">
+              <img src="./assets/banner.png" alt="">
+            </div>
+
+            <div class="max-w-5xl">
+              <h1 class="text-3xl lg:text-6xl font-bold">A barn house of this design has a striking appearance</h1>
+            <p class="py-6 text-yash-clr">
+              The barn house captivates with its blend of rustic charm and modern sophistication, featuring weathered wood, sleek metal accents, and large windows that flood the space with natural light.
+            </p>
+            </div>
+            <button class="btn bg-[#d4f6ae] text-xl font-semibold rounded-full w-full lg:w-52">View Details <i class="fa-solid fa-arrow-right bg-primary-clr p-3 rounded-full -rotate-45 mr-2"></i> </button>
+          </div>
+        </div>
+      </div>
+     </div>
+  </header>
 </body>
+
 </html>
